@@ -1,0 +1,8 @@
+.LocationBox {
+    border-radius: 2rem;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
