@@ -12,8 +12,7 @@ function SearchModal({endModal}){
     async function search(q){
         setIsLoading(true);
         const obj = {};
-        // I use the latitude and longitude because there are cities that share names
-        (await WeatherApi.search(q)).map(v => obj[v.id] = `${v.lat},${v.lon}`);
+        (await WeatherApi.search(q)).map(v => obj[v.id] = v.url);
         setLocations(obj);
         setIsLoading(false);
     }

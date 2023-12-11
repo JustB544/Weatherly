@@ -17,8 +17,8 @@
 
 .SearchModal {
     background-color: rgb(250, 250, 250);
-    width: 95%;
-    max-width: 1140px;
+    width: 50%;
+    max-width: 600px;
     height: fit-content;
     max-height: 80%;
     padding: 20px;
