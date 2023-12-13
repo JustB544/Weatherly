@@ -2,11 +2,13 @@ import React, {useEffect, useState, useContext} from "react";
 import WeatherApi from "./api";
 import TimeContext from "./TimeContext";
 import './LocationBox.css';
+import { useNavigate } from "react-router-dom";
 
 
 function LocationBox({location}){
     const [data, setData] = useState({});
     const {time} = useContext(TimeContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function get(){
@@ -20,7 +22,7 @@ function LocationBox({location}){
     }
 
     return (
-        <div className="LocationBox">
+        <div className="LocationBox" onClick={() => navigate(`/${location}`)}>
             <div>
                 <div style={{display: "flex", flexDirection: "row"}}>
                     <h2>{data.location.name}</h2>

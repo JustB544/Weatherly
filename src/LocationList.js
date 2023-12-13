@@ -7,10 +7,9 @@ import './LocationList.css';
 
 
 function LocationList(){
-    const [locations] = useLocalStorage("locations", true, () => ({"2551650": "Castle Rock"}));
+    const [locations] = useLocalStorage("locations", true, () => ({"2551650": "castle-rock-colorado-united-states-of-america", "2437359": "istanbul-istanbul-turkey"}));
     return (
         <div className="LocationList">
-            {/* <SearchBar /> */}
             {Object.keys(locations).map((l) =>
                 <LocationBox key={l} location={locations[l]}/>
             )}
