@@ -3,13 +3,15 @@ import {useState} from "react";
 /** Hook that allows for access and changing of localstorage */
 
 function useLocalStorage(key, json = false, initialFunc = null){
-    const [state, setState] = useState(((json) ? JSON.parse(localStorage.getItem(key)): localStorage.getItem(key)) || set(initialFunc()));
+    const [state, setState] = useState(((json) ? JSON.parse(localStorage.getItem(key)) : localStorage.getItem(key)) || set(initialFunc(), true));
 
-    function set(val){
+    function set(val, initial = false){
         const _set = (json) ? JSON.stringify(val) : val;
         localStorage.setItem(key, _set);
-        setState(_set);
-        return _set;
+        if (!initial){
+            setState(_set);
+        }
+        return val;
     }
 
     function update(){

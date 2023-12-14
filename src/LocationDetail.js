@@ -13,7 +13,7 @@ function LocationDetail(){
     const { location } = useParams();
     const navigate = useNavigate();
     const forecast = useLoaderData();
-    const [settings, setSettings] = useLocalStorage("settings", true, () => ({speed: "mph", distance: "miles", temperature: "f", pressure: "in", time: "MM/DD/YYYY"}));
+    const [settings, setSettings] = useLocalStorage("settings", true, () => ({speed: "mph", distance: "miles", temperature: "f", pressure: "in"}));
     const {time} = useContext(TimeContext);
 
     useEffect(() => {
