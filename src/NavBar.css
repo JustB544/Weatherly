@@ -12,7 +12,7 @@ nav {
 }
 
 nav a {
-  color: #f0f2f5;
+  color: white;
   text-decoration: none;
 }
 
@@ -38,5 +38,31 @@ nav a.active.navbar-brand {
 
 nav a:not(.navbar-brand):hover {
   font-weight: bold;
+}
+
+.nav-button {
+  width: 20px;
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-add {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.nav-button:hover {
+  color: #f0f2f5;
+  /* font-size: xx-large; */
+}
+
+.nav-settings {
+  margin-right: 25px;
+  margin-left: 25px;
 }
 

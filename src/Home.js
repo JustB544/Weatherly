@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import LocationList from "./LocationList";
 import './Home.css';
 import SearchModal from "./SearchModal";
+import NavContext from "./NavContext";
 
 
 function Home(){
-    const [modal, setModal] = useState(false);
+    const {navContext, setNavContext} = useContext(NavContext);
 
     return (
         <div className="Home">
             <div className="HomeCenter">
-                <div className="HomeAdd">
-                    <button onClick={() => setModal(true)}>Add</button>
-                </div>
-            </div>
-            <div className="HomeCenter">
                 <LocationList />
             </div>
-            { modal && <SearchModal endModal={() => setModal(false)}/>}
+            { navContext.modalType === "add" && <SearchModal endModal={() => setNavContext(nc => ({...nc, modalType: null}))}/>}
         </div>
     );
 }

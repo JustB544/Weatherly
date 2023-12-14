@@ -1,0 +1,29 @@
+.LocationDetail {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 56px);
+    background-color: #d1cfcf;
+    justify-content: center;
+    align-items: center;
+}
+
+.LocationDetailLeft {
+    display: flex;
+    flex: 5;
+    background-color: white;
+    height: 70vh;
+    margin-left: 12vw;
+    flex-direction: column;
+    padding: 20px 0px 20px 20px;
+    max-height: fit-content;
+}
+
+.LocationDetailRight {
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    flex: 9;
+    height: 70vh;
+    margin-right: 12vw;
+    padding: 20px 20px 20px 0px;
+}
