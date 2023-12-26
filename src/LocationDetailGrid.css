@@ -1,3 +1,10 @@
 .LocationDetailGrid {
-    border-spacing: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.LocationDetailGridRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
 }

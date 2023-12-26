@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocalStorage } from "./hooks";
-import {v4 as uuid} from 'uuid';
+import SettingsContext from "./SettingsContext";
 import LocationBox from "./LocationBox";
 import SearchBar from "./SearchBar";
 import './LocationList.css';
 
 
 function LocationList(){
-    const [locations] = useLocalStorage("locations", true, () => ({"2551650": "castle-rock-colorado-united-states-of-america", "2437359": "istanbul-istanbul-turkey"}));
+    const {locations} = useContext(SettingsContext);
+
     return (
         <div className="LocationList">
             {Object.keys(locations).map((l) =>
-                <LocationBox key={l} location={locations[l]}/>
+                <LocationBox key={l} id={l} location={locations[l]} page="home"/>
             )}
         </div>
     );

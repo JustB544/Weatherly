@@ -3,9 +3,9 @@ import './LocationDetailBox.css';
 
 function LocationDetailBox({children}){
     return (
-        <td className="LocationDetailBox">
+        <div className="LocationDetailBox">
             {Children.toArray(children)}
-        </td>
+        </div>
     );
 }
 

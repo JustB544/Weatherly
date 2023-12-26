@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import LocationBox from "./LocationBox";
 import SearchBar from "./SearchBar";
 import WeatherApi from "./api";
+import NavContext from "./NavContext";
+import Modal from "./Modal";
 import './SearchModal.css';
 
 
 function SearchModal({endModal}){
     const [locations, setLocations] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const {navContext} = useContext(NavContext);
 
     async function search(q){
         setIsLoading(true);
@@ -18,23 +21,17 @@ function SearchModal({endModal}){
     }
 
     return (
-        <div className="SearchModalBackground">
-            <div className="SearchModal">
-                <div>
-                    <span className="exit" onClick={endModal}>&times;</span>
-                    <h2>Search</h2>
-                </div>
-                {(isLoading) ? <p>Loading &hellip;</p> : 
-                <>
-                <SearchBar searchFunction={(val, evt) => search(val)}/>
-                <div className="SearchModalList">
-                    {Object.keys(locations).map((l) =>
-                        <LocationBox key={l} location={locations[l]}/>
-                    )}
-                </div> </>
-                }
-            </div>
-        </div>
+        <Modal name="Search" endModal={endModal}>
+            {(isLoading) ? <p>Loading &hellip;</p> : 
+            <>
+            <SearchBar searchFunction={(val, evt) => search(val)}/>
+            <div className="SearchModalList">
+                {Object.keys(locations).map((l) =>
+                    <LocationBox key={l} id={l} location={locations[l]} page={(navContext.home) ? "add" : "add-detail"}/>
+                )}
+            </div> </>
+            }
+        </Modal>
     );
 }
 

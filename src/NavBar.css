@@ -1,5 +1,5 @@
 nav {
-  background-color: black;
+  background-color: #1E2A5A;
   height: 56px;
   display: flex;
   align-items: center;
@@ -41,7 +41,6 @@ nav a:not(.navbar-brand):hover {
 }
 
 .nav-button {
-  width: 20px;
   text-align: center;
   color: white;
   font-size: x-large;
@@ -49,20 +48,22 @@ nav a:not(.navbar-brand):hover {
   align-items: center;
 }
 
-/* .nav-add {
-  background-color: blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+.nav-add {
+  font-size: 20px;
+}
 
 .nav-button:hover {
   color: #f0f2f5;
-  /* font-size: xx-large; */
 }
 
 .nav-settings {
-  margin-right: 25px;
-  margin-left: 25px;
+  margin-right: 15px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.nav-logo {
+  height: 36px;
+  margin-left: 15px;
 }
 

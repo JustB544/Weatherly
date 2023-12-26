@@ -1,0 +1,33 @@
+.SettingsForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SettingsFormSave {
+    border-radius: 3px;
+    color: white;
+    border-width: 0px;
+}
+
+.SettingsFormSaveGray {
+    background-color: lightgray;
+    animation-name: save_to_gray;
+    animation-duration: 0.2s;
+}
+
+.SettingsFormSaveBlue {
+    background-color: blue;
+    animation-name: save_to_blue;
+    animation-duration: 0.2s;
+}
+
+@keyframes save_to_gray {
+    from {background-color: blue;}
+    to {background-color: lightgray;}
+}
+
+@keyframes save_to_blue {
+    from {background-color: lightgray;}
+    to {background-color: blue;}
+}

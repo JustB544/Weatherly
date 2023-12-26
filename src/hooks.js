@@ -9,7 +9,7 @@ function useLocalStorage(key, json = false, initialFunc = null){
         const _set = (json) ? JSON.stringify(val) : val;
         localStorage.setItem(key, _set);
         if (!initial){
-            setState(_set);
+            setState(val);
         }
         return val;
     }

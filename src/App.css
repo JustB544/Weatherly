@@ -1,4 +1,17 @@
 .App {
   text-align: center;
   height: 100vh;
+  font-family: "Inter";
+}
+
+.AppDesktop {
+  font-size: 20px;
+}
+
+.AppMobile {
+  font-size: 13.33px;
+}
+
+html {
+  background-color: #DADADA;
 }

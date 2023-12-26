@@ -1,21 +1,25 @@
 .LocationDetail {
     display: flex;
     flex-direction: row;
+    margin-top: 27px;
+}
+
+.LocationDetailBackground {
     height: calc(100vh - 56px);
-    background-color: #d1cfcf;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .LocationDetailLeft {
     display: flex;
-    flex: 5;
     background-color: white;
     height: 70vh;
-    margin-left: 12vw;
     flex-direction: column;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 20px 50px 20px;
+    justify-content: center;
     max-height: fit-content;
+    width: 476px;
 }
 
 .LocationDetailRight {
@@ -24,6 +28,68 @@
     justify-content: center;
     flex: 9;
     height: 70vh;
-    margin-right: 12vw;
-    padding: 20px 20px 20px 0px;
+    padding: 20px 49px 50px 49px !important;
+    width: 822px;
+    flex-direction: column;
+}
+
+.LocationDetailArrowLeft {
+    float: left;
+}
+
+.LocationDetailArrowLeft:hover {
+    font-weight: bold;
+}
+
+.LocationDetailBoxTitle {
+    color: #D0D7F9;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    text-align: left;
+}
+
+.LocationDetailBoxValueBig {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    text-align: left;
+}
+
+.LocationDetailBoxValueSmall {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    text-align: left;
+}
+
+.LocationDetailRiseSet {
+    font-size: 18px;
+    color: #D0D7F9;
+}
+
+.LocationDetailRightHeader {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    margin: 35px 0 32px 0;
+}
+
+.LocationDetailTab {
+    margin: 0px 16px;
+    margin-top: 35px;
+    color: #AAAAAA;
+}
+
+.LocationDetailTab:hover {
+    color: #8C8C8C;
+}
+
+.LocationDetailCurrentTab {
+    margin: 0px 16px;
+    color: black;
+    margin-top: 35px;
 }
