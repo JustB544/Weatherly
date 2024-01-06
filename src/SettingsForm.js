@@ -23,29 +23,40 @@ function SettingsForm() {
     }
 
     return (
-        <form className="SettingsForm" onSubmit={handleSubmit}>
-            <label htmlFor="speed">Speed: 
-                <select name="speed" onChange={handleChange} value={formData.speed}>
-                    <option value="mph">mph</option>
-                    <option value="kph">kph</option>
-                </select>
-            </label>
-            <label htmlFor="temperature">Temperature: 
-                <select name="temperature" onChange={handleChange} value={formData.temperature}>
-                    <option value="f">Fahrenheit</option>
-                    <option value="c">Celsius</option>
-                </select>
-            </label>
-            <label htmlFor="pressure">Pressure: 
-                <select name="pressure" onChange={handleChange} value={formData.pressure}>
-                    <option value="in">inHg</option>
-                    <option value="mb">mbar</option>
-                </select>
-            </label>
-            <div>
-                <button className={`SettingsFormSave ${(updatedSettings) ? "SettingsFormSaveGray": "SettingsFormSaveBlue"}`}>Save</button>
-            </div>
-        </form>
+        <div style={{display: "flex", justifyContent: "center"}}>
+            <form className="SettingsForm" onSubmit={handleSubmit}>
+                <div className="SettingsFormOption">
+                    <label htmlFor="speed" className="SettingsFormLabel">Speed</label>
+                    <div className="SettingsFormSelect">
+                        <select name="speed" onChange={handleChange} value={formData.speed}>
+                            <option value="mph">mph</option>
+                            <option value="kph">kph</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="SettingsFormOption">
+                    <label htmlFor="temperature" className="SettingsFormLabel">Temperature</label>
+                    <div className="SettingsFormSelect">
+                        <select name="temperature" onChange={handleChange} value={formData.temperature}>
+                            <option value="f">Fahrenheit</option>
+                            <option value="c">Celsius</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="SettingsFormOption">
+                    <label htmlFor="pressure" className="SettingsFormLabel">Pressure</label>
+                    <div className="SettingsFormSelect">
+                        <select name="pressure" onChange={handleChange} value={formData.pressure}>
+                            <option value="in">inHg</option>
+                            <option value="mb">mbar</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button className={`SettingsFormSave ${(updatedSettings) ? "SettingsFormSaveGray": "SettingsFormSaveBlue"}`}>Save</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

@@ -7,7 +7,7 @@ import SettingsForm from "./SettingsForm";
 function SettingsModal({endModal}){
 
     return (
-        <Modal name="Settings" endModal={endModal}>
+        <Modal name="Settings" endModal={endModal} height={471}>
             <SettingsForm />
         </Modal>
     );

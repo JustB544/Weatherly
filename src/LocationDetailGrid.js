@@ -11,10 +11,11 @@ function LocationDetailGrid({children, height, width}){
         }
     }, []);
 
+
     return (
         <div className="LocationDetailGrid">
             {Array.from({length: height}, (v, i) => i).map((v) =>
-                <div key={v} className="LocationDetailGridRow">{Children.toArray(children).slice(v*width, (v+1)*width)}</div>
+                <div key={v} className="LocationDetailGridRow"> {Children.toArray(children).slice(v*width, (v+1)*width)}</div>
             )}
         </div>
     );

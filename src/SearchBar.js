@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./SearchBar.css";
 
 
 function SearchBar({searchFunction}){
@@ -18,11 +19,11 @@ function SearchBar({searchFunction}){
 
   return (
     <div>
-        <form style={{display: "flex", justifyContent: "center", flexDirection: "row"}} onSubmit={handleSubmit}>
-            <input placeholder="Search" onChange={handleChange}/>
-            <button>Submit</button>
+        <form className="SearchBar" onSubmit={handleSubmit}>
+            <input placeholder="Enter location" onChange={handleChange}/>
+            <button>Search</button>
         </form>
-        <p>Enter a location identifier (e.g. postal code, city name)</p>
+        <p className="SearchBarText">Enter a location identifier (e.g. postal code, city name)</p>
     </div>
   );
 }

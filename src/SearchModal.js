@@ -21,7 +21,7 @@ function SearchModal({endModal}){
     }
 
     return (
-        <Modal name="Search" endModal={endModal}>
+        <Modal name="Add City" endModal={endModal} height={761}>
             {(isLoading) ? <p>Loading &hellip;</p> : 
             <>
             <SearchBar searchFunction={(val, evt) => search(val)}/>

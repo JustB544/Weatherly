@@ -1,0 +1,15 @@
+.LocationDetailBar {
+    max-width: 813px;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.LocationDetailBar p {
+    width: 128px;
+    text-align: left;
+    font-size: 28px;
+    height: fit-content;
+    margin: 29px 0;
+}

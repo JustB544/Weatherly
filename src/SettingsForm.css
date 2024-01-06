@@ -2,32 +2,67 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 18px;
+    width: 243px;
+    font-family: "Inter";
 }
 
 .SettingsFormSave {
-    border-radius: 3px;
+    border-radius: 7px;
+    background-color: #1E2A5A;
     color: white;
     border-width: 0px;
+    font-size: 18px;
+    padding: 11px 32px 11px 32px;
+    margin-top: 42px;
+    margin-bottom: 25px;
 }
 
-.SettingsFormSaveGray {
-    background-color: lightgray;
-    animation-name: save_to_gray;
-    animation-duration: 0.2s;
+.SettingsFormSave:hover {
+    background-color: #283465;
 }
 
-.SettingsFormSaveBlue {
-    background-color: blue;
-    animation-name: save_to_blue;
-    animation-duration: 0.2s;
+.SettingsFormLabel {
+    font-weight: 700;
+    margin: 19px 0 6px 0;
+    
 }
 
-@keyframes save_to_gray {
-    from {background-color: blue;}
-    to {background-color: lightgray;}
+.SettingsFormOption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 243px;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Inter";
 }
 
-@keyframes save_to_blue {
-    from {background-color: lightgray;}
-    to {background-color: blue;}
+.SettingsForm option {
+    background-color: #ECECEC;
+    width: 243px;
+    border: 0;
+    outline: none;
+    font-family: "Inter";
+    font-size: 18px;
+    padding: 11px;
+}
+
+.SettingsForm select {
+    background-color: #ECECEC;
+    width: 243px;
+    border: 0;
+    outline: none;
+    font-family: "Inter";
+    font-size: 18px;
+}
+
+.SettingsFormSelect {
+    background-color: #ECECEC;
+    padding: 11px;
+    border-width: 0;
+    border-radius: 7px;
+    width: 243px;
+    height: 25px;
+    display: flex;
 }
