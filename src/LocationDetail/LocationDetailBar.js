@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import SettingsContext from "./SettingsContext";
+import SettingsContext from "../SettingsContext";
 import "./LocationDetailBar.css";
 
 function LocationDetailBar({weather, today}){

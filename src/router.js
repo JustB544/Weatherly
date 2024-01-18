@@ -2,7 +2,7 @@
 
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import Home from './Home';
-import LocationDetail, {locationDetailLoader} from './LocationDetail';
+import LocationDetail, {locationDetailLoader} from './LocationDetail/LocationDetail';
 import App from './App';
 
 const router = createBrowserRouter([{

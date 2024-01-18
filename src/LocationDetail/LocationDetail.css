@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 27px;
+    max-width: 100%;
 }
 
 .LocationDetailBackground {
@@ -19,7 +20,7 @@
     padding: 20px 20px 50px 20px;
     justify-content: center;
     max-height: fit-content;
-    width: 476px;
+    width: 476px !important;
 }
 
 .LocationDetailRight {
@@ -28,13 +29,14 @@
     justify-content: center;
     flex: 9;
     height: 70vh;
-    padding: 20px 49px 50px 49px !important;
+    padding: 20px 49px 50px 49px;
     width: 822px;
     flex-direction: column;
 }
 
 .LocationDetailArrowLeft {
     float: left;
+    font-size: 20px;
 }
 
 .LocationDetailArrowLeft:hover {

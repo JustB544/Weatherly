@@ -1,19 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams, json, useNavigate } from "react-router-dom";
-import WeatherApi from "./api";
+import WeatherApi from "../api";
 import './LocationDetail.css';
 import LocationDetailGrid from "./LocationDetailGrid";
 import LocationDetailBox from "./LocationDetailBox";
-import { useLocalStorage } from "./hooks";
-import TimeContext from "./TimeContext";
-import SettingsContext from "./SettingsContext";
+import { useLocalStorage } from "../hooks";
+import TimeContext from "../TimeContext";
+import SettingsContext from "../SettingsContext";
 import 'font-awesome/css/font-awesome.min.css';
 import LocationDetailBar from "./LocationDetailBar";
 
 function LocationDetail(){
     const forecast = useLoaderData();
     const params = useParams();
-    const {settings, setSettings, isDesktop} = useContext(SettingsContext);
+    const {settings, setSettings, isDesktop, width} = useContext(SettingsContext);
     const {time} = useContext(TimeContext);
     const [history, setHistory] = useState({});
     const navigate = useNavigate();

@@ -14,8 +14,9 @@ function App() {
   const location = useLocation();
   const [navContext, setNavContext] = useState({home: (location.pathname === "/"), modalType: null});
   const [settings, setSettings] = useLocalStorage("settings", true, () => ({speed: "mph", temperature: "f", pressure: "in"}));
-  const [locations, setLocations, updateLocations] = useLocalStorage("locations", true, () => ({"2551650": "castle-rock-colorado-united-states-of-america", "2437359": "istanbul-istanbul-turkey"}));
+  const [locations, setLocations, updateLocations] = useLocalStorage("locations", true, () => ({}));
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 800);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,6 +27,7 @@ function App() {
     }, 60000 - Date.now() % 60000);
     window.addEventListener("resize", () => {
       setIsDesktop(window.innerWidth >= 800);
+      setWidth(window.width);
     });
   },[]);
 
@@ -38,7 +40,7 @@ function App() {
     <div className={`App App${(isDesktop) ? "Desktop" : "Mobile"}`}>
       <TimeContext.Provider value={{timeContext}}>
         <NavContext.Provider value={{navContext, setNavContext}}>
-          <SettingsContext.Provider value={{settings, setSettings, isDesktop, locations, setLocations, updateLocations}}>
+          <SettingsContext.Provider value={{settings, setSettings, isDesktop, width, locations, setLocations, updateLocations}}>
             <NavBar />
             <main>
               <Outlet />
