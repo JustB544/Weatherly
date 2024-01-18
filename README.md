@@ -6,6 +6,6 @@ All code in this repository is under a MIT license which can be viewed in Licens
 
 Built using React.js with node.js, with client side routing using React Router
 
-To visit the website click [here](https://weatherly-uicx.onrender.com)
+To visit the website click [here](https://weatherly-m8zy.onrender.com)
 
 Weather data sourced from [WeatherAPI.com](https://rapidapi.com/weatherapi/api/weatherapi-com)
