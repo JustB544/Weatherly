@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_KEY } from "./hidden";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const BASE_URL = "https://weatherapi-com.p.rapidapi.com";
 // const API_KEY = process.env.API_KEY;
