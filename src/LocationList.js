@@ -9,6 +9,10 @@ import './LocationList.css';
 function LocationList(){
     const {locations} = useContext(SettingsContext);
 
+    if (Object.keys(locations).length === 0){
+        return <h2 style={{color: "#999999"}}>No locations added</h2>
+    }
+
     return (
         <div className="LocationList">
             {Object.keys(locations).map((l) =>
