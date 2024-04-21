@@ -36,7 +36,7 @@ function LocationDetail(){
         <hr style={{color: "#eeeeee", width: "80%", margin: "30px 0px 50px 10%"}}/>
         <h4 style={{fontSize: "16px", color: "#6D6D6D", margin: "0 0 10px 0"}}>{Intl.DateTimeFormat("en-US", {timeZone: forecast.location.tz_id, day: "numeric", month: "long", year: "numeric"}).format(time)}</h4>
         <h4 style={{fontSize: "20px", fontWeight: 600, margin: "0"}}>{Intl.DateTimeFormat("en-US", {timeZone: forecast.location.tz_id, weekday: "long", hour: "numeric", minute: "numeric"}).format(time)}</h4>
-        <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}}><h3 style={{fontSize: "48px", fontWeight: 300, margin: "0"}}>{forecast.location.name}</h3></div>
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}}><h3 style={{fontSize: "48px", fontWeight: 300, margin: "0"}}>{forecast.location.name}, {forecast.location.region}</h3></div>
     </div>
 
     const Today = 

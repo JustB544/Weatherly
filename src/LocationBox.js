@@ -53,7 +53,7 @@ function LocationBox({id, location, page}){
             </div>
             <div className="LocationBoxRight">
                 <div style={{padding: "1em", textAlign: "left", width: "fit-content", float: "left"}}>
-                    <span style={{fontSize: "1.8em"}}>{data.location.name}</span>
+                    <span style={{fontSize: "1.8em"}}>{data.location.name}, {data.location.region}</span>
                     <p style={{margin: "0.5em 0 0 0"}}>{Intl.DateTimeFormat("en-US", {timeZone: data.location.tz_id, hour: "numeric", minute: "numeric"}).format(time)}</p>
                 </div>
                 {(page === "home" || added) ? 
